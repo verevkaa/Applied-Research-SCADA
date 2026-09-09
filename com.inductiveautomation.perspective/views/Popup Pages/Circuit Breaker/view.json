@@ -1,0 +1,251 @@
+{
+  "custom": {},
+  "events": {
+    "system": {
+      "onShutdown": {
+        "config": {
+          "script": "\tself.getChild(\"root\").custom.armed \u003d False"
+        },
+        "scope": "G",
+        "type": "script"
+      },
+      "onStartup": {
+        "config": {
+          "script": "\tself.getChild(\"root\").custom.armed \u003d False"
+        },
+        "scope": "G",
+        "type": "script"
+      }
+    }
+  },
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 204,
+      "width": 500
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ID"
+        },
+        "position": {
+          "height": 32,
+          "width": 110,
+          "x": 80,
+          "y": 26.5
+        },
+        "props": {
+          "text": "ID: CB-1",
+          "textStyle": {
+            "fontSize": 14,
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "State"
+        },
+        "position": {
+          "height": 32,
+          "width": 119,
+          "x": 326.75,
+          "y": 26.5
+        },
+        "props": {
+          "text": "State: Closed",
+          "textStyle": {
+            "fontSize": 14,
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t\n\tfrom time import sleep\n\t\n\tmyDescription \u003d \"LatchON Sent (ARM)\"\n\tname \u003d \"CB_ARM\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\tmyActor \u003d soe.getUser(self.session)\n\t\n\tsoe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")\n\t\n\tsleep(2)\n\t\n\tself.parent.custom.armed \u003d True\n\t\n\tmyDescription \u003d \"LatchON Received (ARM)\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\t\n\tsoe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Arm_Button"
+        },
+        "position": {
+          "height": 31,
+          "width": 129,
+          "x": 80.25,
+          "y": 75.5
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5",
+            "borderStyle": "solid",
+            "borderWidth": "1px"
+          },
+          "text": "ARM",
+          "textStyle": {
+            "color": "#000000",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t\n\tfrom time import sleep\n\t\n\tmyDescription \u003d \"LatchOFF Sent (ARM)\"\n\tname \u003d \"CB_ARM\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\tmyActor \u003d soe.getUser(self.session)\n\t\n\tsoe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")\n\t\n\tsleep(2)\n\t\n\tself.parent.custom.armed \u003d False\n\t\n\tmyDescription \u003d \"LatchOFF Received (ARM)\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\t\n\tsoe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Cancel_Button"
+        },
+        "position": {
+          "height": 31,
+          "width": 129,
+          "x": 326.75,
+          "y": 75.5
+        },
+        "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "path": "parent.custom.armed"
+              },
+              "type": "property"
+            }
+          },
+          "props.textStyle.color": {
+            "binding": {
+              "config": {
+                "expression": "if({parent.custom.armed}, \"#000000\", \"#9E9E9E\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5",
+            "borderStyle": "solid",
+            "borderWidth": "1px"
+          },
+          "text": "CANCEL",
+          "textStyle": {
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Open_Button"
+        },
+        "position": {
+          "height": 31,
+          "width": 129,
+          "x": 80.25,
+          "y": 131.5
+        },
+        "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "path": "parent.custom.armed"
+              },
+              "type": "property"
+            }
+          },
+          "props.textStyle.color": {
+            "binding": {
+              "config": {
+                "expression": "if({parent.custom.armed}, \"#000000\", \"#9E9E9E\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#FF0000",
+            "borderStyle": "solid",
+            "borderWidth": "1px"
+          },
+          "text": "OPEN",
+          "textStyle": {
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Close_Button"
+        },
+        "position": {
+          "height": 31,
+          "width": 129,
+          "x": 326.75,
+          "y": 131.5
+        },
+        "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "path": "parent.custom.armed"
+              },
+              "type": "property"
+            }
+          },
+          "props.textStyle.color": {
+            "binding": {
+              "config": {
+                "expression": "if({parent.custom.armed}, \"#000000\", \"#9E9E9E\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#00FF00",
+            "borderStyle": "solid",
+            "borderWidth": "1px"
+          },
+          "text": "CLOSE",
+          "textStyle": {
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "custom": {
+      "armed": false
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

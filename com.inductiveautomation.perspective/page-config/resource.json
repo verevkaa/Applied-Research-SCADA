@@ -1,0 +1,16 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "config.json"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "ITOPSadmin",
+      "timestamp": "2026-09-04T16:02:20Z"
+    },
+    "lastModificationSignature": "8c8a0ccb02553335b5fbb6ea367e0817d78b473fd3e9b6f272d7913cff1b2fc4"
+  }
+}

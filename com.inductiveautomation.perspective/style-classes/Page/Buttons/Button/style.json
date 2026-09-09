@@ -1,0 +1,18 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "#FFFFFF00",
+      "borderStyle": "none",
+      "outlineStyle": "none"
+    }
+  },
+  "variants": [
+    {
+      "pseudo": "hover",
+      "style": {
+        "borderStyle": "groove",
+        "outlineStyle": "groove"
+      }
+    }
+  ]
+}

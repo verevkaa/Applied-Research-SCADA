@@ -1,0 +1,17 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "onShutdown.py"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "ITOPSadmin",
+      "timestamp": "2026-09-08T14:15:54Z"
+    },
+    "lastModificationSignature": "c280d8fa749e2294c4e0e2975367772a7525f3099619f395c3d0ecec9fbe46f8",
+    "enabled": true
+  }
+}

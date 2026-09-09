@@ -1,0 +1,33 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "Query",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "MicrosoftSQL",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "d96416d8e89fef0ba37adf99a84df706514f64116585a5e3411784569e375ebf",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "ITOPSadmin",
+      "timestamp": "2026-09-09T15:37:06Z"
+    }
+  }
+}

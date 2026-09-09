@@ -1,0 +1,16 @@
+{
+  "scope": "C",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "data.bin"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "ITOPSadmin",
+      "timestamp": "2026-09-03T15:09:23Z"
+    },
+    "lastModificationSignature": "40242648f085bd29dfd455914125eafae07abe9fe04951d32c866841d5542f20"
+  }
+}

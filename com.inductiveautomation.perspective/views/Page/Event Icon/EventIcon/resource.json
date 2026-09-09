@@ -1,0 +1,17 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "view.json",
+    "thumbnail.png"
+  ],
+  "attributes": {
+    "lastModificationSignature": "e673819bc006cb4c2273420efa0bf97e460b57551a8ae27418693b3c13cc4903",
+    "lastModification": {
+      "actor": "ITOPSadmin",
+      "timestamp": "2026-09-09T18:36:06Z"
+    }
+  }
+}

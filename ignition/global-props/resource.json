@@ -1,0 +1,16 @@
+{
+  "scope": "A",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "data.bin"
+  ],
+  "attributes": {
+    "lastModificationSignature": "e9a1f22179f302e01943700187b89dd21fbf1c3e773056b1a8da4ef2cb3859eb",
+    "lastModification": {
+      "actor": "ITOPSadmin",
+      "timestamp": "2026-09-09T15:35:34Z"
+    }
+  }
+}

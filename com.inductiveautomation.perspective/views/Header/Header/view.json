@@ -1,0 +1,330 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 55
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "hasDelegate": true,
+          "name": "Spacer Start"
+        },
+        "position": {
+          "basis": "16px",
+          "shrink": 0
+        },
+        "props": {
+          "text": " "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "id": "menu",
+                "type": "toggle"
+              },
+              "scope": "C",
+              "type": "dock"
+            }
+          }
+        },
+        "meta": {
+          "name": "Menu Dock"
+        },
+        "position": {
+          "basis": "24px",
+          "shrink": 0
+        },
+        "props": {
+          "path": "material/menu",
+          "style": {
+            "classes": "Header/Icon",
+            "marginRight": "10px"
+          }
+        },
+        "type": "ia.display.icon"
+      },
+      {
+        "meta": {
+          "name": "logo-ideaworks"
+        },
+        "position": {
+          "basis": "300px"
+        },
+        "props": {
+          "fit": {
+            "mode": "cover"
+          },
+          "source": "data:image/png;base64,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\u003d\u003d"
+        },
+        "type": "ia.display.image"
+      },
+      {
+        "meta": {
+          "name": "Ideaworks_Logo"
+        },
+        "position": {
+          "basis": "500px",
+          "grow": 1
+        },
+        "props": {
+          "source": "/system/images/Ideaworks_Logo.png"
+        },
+        "type": "ia.display.image"
+      },
+      {
+        "meta": {
+          "hasDelegate": true,
+          "name": "Filler"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "text": " "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "hasDelegate": true,
+          "name": "Spacer 1"
+        },
+        "position": {
+          "basis": "10px"
+        },
+        "props": {
+          "text": " "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tif self.session.props.auth.authenticated:\n\t\tsystem.perspective.logout()\n\telse:\n\t\tsystem.perspective.login()"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "User"
+        },
+        "position": {
+          "basis": "30px",
+          "shrink": 0
+        },
+        "props": {
+          "path": "material/person",
+          "style": {
+            "classes": "Header/Icon"
+          }
+        },
+        "type": "ia.display.icon"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tif self.session.props.auth.authenticated:\n\t\tsystem.perspective.logout()\n\telse:\n\t\tsystem.perspective.login()"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "hasDelegate": true,
+          "name": "Sign In"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "session.props.auth.user.userName"
+              },
+              "transforms": [
+                {
+                  "expression": "if({value} \u003d null || len({value}) \u003d 0, \"Sign In\", {value})",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Header/Icon",
+            "cursor": "pointer",
+            "marginLeft": "4px"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "hasDelegate": true,
+          "name": "Spacer 2"
+        },
+        "position": {
+          "basis": "10px",
+          "shrink": 0
+        },
+        "props": {
+          "text": " "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "page": "/alarms"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "Alarm Icon"
+        },
+        "position": {
+          "basis": "26px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "../Alarms.custom.numAlarms"
+              },
+              "transforms": [
+                {
+                  "expression": "if({value} \u003e 0, \"Header/Alarm_Active\", \"Header/Icon\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "material/alarm"
+        },
+        "type": "ia.display.icon"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "page": "/alarms"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "hasDelegate": true,
+          "name": "Alarms"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "propConfig": {
+          "custom.numAlarms": {
+            "binding": {
+              "config": {
+                "expression": "now(2000)"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn len(system.alarm.queryStatus(state\u003d[\"ActiveUnacked\"], source\u003d[\"prov:OPC-UA-to-MySQL:/tag:_SEL-751_/*\"]))",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "../Alarms.custom.numAlarms"
+              },
+              "transforms": [
+                {
+                  "expression": "if({value} \u003e 0, \"Header/Alarm_Active\", \"Header/Icon\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "this.custom.numAlarms"
+              },
+              "transforms": [
+                {
+                  "expression": "numberFormat({value}, \"#,##0\") + \" alarm\" + if({value} \u003e 1 || {value} \u003d 0, \"s\", \"\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "cursor": "pointer",
+            "marginLeft": "6px"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "hasDelegate": true,
+          "name": "Spacer End"
+        },
+        "position": {
+          "basis": "16px",
+          "shrink": 0
+        },
+        "props": {
+          "text": " "
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "backgroundColor": "",
+        "classes": "Header/Header"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

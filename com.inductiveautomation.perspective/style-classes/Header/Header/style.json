@@ -1,0 +1,17 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "#FFFFFF",
+      "borderBottomColor": "#6E1232",
+      "borderBottomStyle": "solid",
+      "borderBottomWidth": "1px",
+      "borderLeftStyle": "none",
+      "borderRightStyle": "none",
+      "borderTopStyle": "none",
+      "color": "#6E1232",
+      "fontSize": "14px",
+      "lineHeight": "17px",
+      "fill": "#FFFFFF"
+    }
+  }
+}
