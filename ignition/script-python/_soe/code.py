@@ -9,9 +9,9 @@ def alarmClass(alarmName):
 	Maps an alarm name to the SOE description prefix.
 	Returns None for alarms that should not be logged.
 	"""
-	if alarmName in ("Alarm High", "Alarm Low"):
+	if alarmName in ("Alarm Upper", "Alarm Lower"):
 		return "Threshold"
-	elif alarmName == "Alarm":
+	elif alarmName == "Alarm BadQuality":
 		return "BadQuality"
 	else:
 		return

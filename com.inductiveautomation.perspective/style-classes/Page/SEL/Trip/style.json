@@ -1,0 +1,13 @@
+{
+  "base": {
+    "animation": {
+      "keyframes": {
+        "0%": {
+          "borderColor": "#FF0000",
+          "color": "#FF0000"
+        },
+        "100%": {}
+      }
+    }
+  }
+}

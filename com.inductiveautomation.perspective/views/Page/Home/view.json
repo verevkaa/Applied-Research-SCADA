@@ -60,6 +60,46 @@
                   "width": 700
                 },
                 "propConfig": {
+                  "props.elements[12].elements[0].stroke.paint": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({[OPC-UA-to-MySQL]_SEL-751_/Points/CB_Status}, \"#00cc00\", \"#ff0000\")"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.elements[13].elements[0].fill.paint": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({[OPC-UA-to-MySQL]_SEL-751_/Points/CB_Status}, \"#00cc00\", \"#ff0000\")"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.elements[13].elements[0].stroke.paint": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({[OPC-UA-to-MySQL]_SEL-751_/Points/CB_Status}, \"#009900\", \"#990000\")"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.elements[14].fill.paint": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({[OPC-UA-to-MySQL]_SEL-751_/Points/FrontPanel_LED}, \"#ff0000\", \"#0066cc\")"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.elements[15].fill.paint": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({[OPC-UA-to-MySQL]_SEL-751_/Points/FrontPanel_LED}, \"#ff0000\", \"#0066cc\")"
+                      },
+                      "type": "expr"
+                    }
+                  },
                   "props.elements[16].text": {
                     "binding": {
                       "config": {
@@ -135,7 +175,7 @@
                   "props.elements[25].text": {
                     "binding": {
                       "config": {
-                        "expression": "\"Frequency \u003d \" + {[OPC-UA-to-MySQL]_SEL-751_/Points/Frequency_Mag} + \"Hz\""
+                        "expression": "\"Freq. \u003d \" + {[OPC-UA-to-MySQL]_SEL-751_/Points/Frequency_Mag} + \"Hz\""
                       },
                       "type": "expr"
                     }
@@ -144,6 +184,38 @@
                     "binding": {
                       "config": {
                         "expression": "\"PF \u003d \" + {[OPC-UA-to-MySQL]_SEL-751_/Points/PF_Mag} + \"%\""
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.elements[29].fill.paint": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({[OPC-UA-to-MySQL]_SEL-751_/Points/Relay_Trip}, \"#FF0000\", \"#FF000000\")"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.elements[7].stroke.paint": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({[OPC-UA-to-MySQL]_SEL-751_/Points/FrontPanel_LED}, \"#ff0000\", \"#0066cc\")"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.elements[9].elements[0].fill.paint": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({[OPC-UA-to-MySQL]_SEL-751_/Points/CB_Status}, \"#00cc00\", \"#ff0000\")"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.elements[9].elements[0].stroke.paint": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({[OPC-UA-to-MySQL]_SEL-751_/Points/CB_Status}, \"#009900\", \"#990000\")"
                       },
                       "type": "expr"
                     }
@@ -319,13 +391,12 @@
                       "fill": {
                         "paint": "transparent"
                       },
-                      "height": "60",
+                      "height": 60,
                       "name": "rect",
                       "rx": "9",
                       "ry": "9",
                       "stroke": {
-                        "paint": "#0066cc",
-                        "width": "2"
+                        "width": 2
                       },
                       "type": "rect",
                       "width": "120",
@@ -354,14 +425,10 @@
                     {
                       "elements": [
                         {
-                          "fill": {
-                            "paint": "#00cc00"
-                          },
+                          "fill": {},
                           "height": "40",
                           "name": "rect",
-                          "stroke": {
-                            "paint": "#009900"
-                          },
+                          "stroke": {},
                           "type": "rect",
                           "width": "40",
                           "x": "251",
@@ -435,8 +502,7 @@
                           },
                           "name": "path",
                           "stroke": {
-                            "miterlimit": "10",
-                            "paint": "#00cc00"
+                            "miterlimit": "10"
                           },
                           "type": "path"
                         }
@@ -449,13 +515,10 @@
                       "elements": [
                         {
                           "d": "M 531 11 L 561 31 L 531 51 Z",
-                          "fill": {
-                            "paint": "#00cc00"
-                          },
+                          "fill": {},
                           "name": "path",
                           "stroke": {
-                            "miterlimit": "10",
-                            "paint": "#009900"
+                            "miterlimit": "10"
                           },
                           "type": "path"
                         }
@@ -465,9 +528,7 @@
                       "type": "group"
                     },
                     {
-                      "fill": {
-                        "paint": "#0066cc"
-                      },
+                      "fill": {},
                       "fontSize": "14px",
                       "fontWeight": "bold",
                       "name": "text",
@@ -477,9 +538,7 @@
                       "y": "186.3333282470703"
                     },
                     {
-                      "fill": {
-                        "paint": "#0066cc"
-                      },
+                      "fill": {},
                       "fontSize": "14px",
                       "fontWeight": "bold",
                       "name": "text_0",
@@ -496,8 +555,8 @@
                       "fontWeight": "bold",
                       "name": "text_1",
                       "type": "text",
-                      "x": "167.5",
-                      "y": "86.5"
+                      "x": "198",
+                      "y": "90.5"
                     },
                     {
                       "fill": {
@@ -507,8 +566,8 @@
                       "fontWeight": "bold",
                       "name": "text_2",
                       "type": "text",
-                      "x": "167.29833984375",
-                      "y": "106.5"
+                      "x": "197.79833984375",
+                      "y": "110.5"
                     },
                     {
                       "fill": {
@@ -518,8 +577,8 @@
                       "fontWeight": "bold",
                       "name": "text_3",
                       "type": "text",
-                      "x": "168.12890625",
-                      "y": "126.5"
+                      "x": "198.62890625",
+                      "y": "130.5"
                     },
                     {
                       "fill": {
@@ -529,8 +588,8 @@
                       "fontWeight": "bold",
                       "name": "text_4",
                       "type": "text",
-                      "x": "242.83056640625",
-                      "y": "126.5"
+                      "x": "273.33056640625",
+                      "y": "130.5"
                     },
                     {
                       "fill": {
@@ -540,8 +599,8 @@
                       "fontWeight": "bold",
                       "name": "text_5",
                       "type": "text",
-                      "x": "242",
-                      "y": "106.5"
+                      "x": "272.5",
+                      "y": "110.5"
                     },
                     {
                       "fill": {
@@ -551,8 +610,8 @@
                       "fontWeight": "bold",
                       "name": "text_6",
                       "type": "text",
-                      "x": "242.20166015625",
-                      "y": "86.5"
+                      "x": "272.70166015625",
+                      "y": "90.5"
                     },
                     {
                       "fill": {
@@ -562,8 +621,8 @@
                       "fontWeight": "bold",
                       "name": "text_7",
                       "type": "text",
-                      "x": "329.20166015625",
-                      "y": "86.5"
+                      "x": "453.20166015625",
+                      "y": "90.5"
                     },
                     {
                       "fill": {
@@ -573,8 +632,8 @@
                       "fontWeight": "bold",
                       "name": "text_8",
                       "type": "text",
-                      "x": "329",
-                      "y": "106.5"
+                      "x": "453",
+                      "y": "110.5"
                     },
                     {
                       "fill": {
@@ -584,8 +643,8 @@
                       "fontWeight": "bold",
                       "name": "text_9",
                       "type": "text",
-                      "x": "329.83056640625",
-                      "y": "126.5"
+                      "x": "453.83056640625",
+                      "y": "130.5"
                     },
                     {
                       "fill": {
@@ -595,8 +654,8 @@
                       "fontWeight": "bold",
                       "name": "text_10",
                       "type": "text",
-                      "x": "424",
-                      "y": "93.5"
+                      "x": "8",
+                      "y": "110.5"
                     },
                     {
                       "fill": {
@@ -606,8 +665,52 @@
                       "fontWeight": "bold",
                       "name": "text_11",
                       "type": "text",
-                      "x": "460",
-                      "y": "113.5"
+                      "x": "8",
+                      "y": "90.5"
+                    },
+                    {
+                      "fill": {
+                        "paint": "none"
+                      },
+                      "height": "60",
+                      "name": "rect_0",
+                      "opacity": 1,
+                      "stroke": {
+                        "dasharray": "5",
+                        "dashoffset": 5,
+                        "paint": "rgb(0, 0, 0)"
+                      },
+                      "type": "rect",
+                      "width": "179",
+                      "x": "191.5",
+                      "y": "75.5"
+                    },
+                    {
+                      "fill": {
+                        "paint": "none"
+                      },
+                      "height": "60",
+                      "name": "rect_1",
+                      "opacity": 1,
+                      "stroke": {
+                        "dasharray": "5",
+                        "dashoffset": 5,
+                        "paint": "rgb(0, 0, 0)"
+                      },
+                      "type": "rect",
+                      "width": "88",
+                      "x": "449.5",
+                      "y": "75.5"
+                    },
+                    {
+                      "fill": {},
+                      "fontSize": "14px",
+                      "fontWeight": "bold",
+                      "name": "text_12",
+                      "text": "TRIPPED!",
+                      "type": "text",
+                      "x": "238.88671875",
+                      "y": "154"
                     }
                   ],
                   "viewBox": "0 0 562 220"
@@ -644,22 +747,15 @@
                   "x": 314,
                   "y": 26
                 },
-                "props": {
-                  "style": {
-                    "classes": "Page/Buttons/Button"
-                  },
-                  "text": ""
-                },
-                "type": "ia.input.button"
-              },
-              {
-                "meta": {
-                  "name": "Source_Button"
-                },
-                "position": {
-                  "height": 78,
-                  "width": 80,
-                  "y": 12.5
+                "propConfig": {
+                  "props.enabled": {
+                    "binding": {
+                      "config": {
+                        "expression": "isAuthorized(false, \"Authenticated/Roles/Operator\", \"Authenticated/Roles/Administrator\")"
+                      },
+                      "type": "expr"
+                    }
+                  }
                 },
                 "props": {
                   "style": {
@@ -670,18 +766,41 @@
                 "type": "ia.input.button"
               },
               {
+                "events": {
+                  "component": {
+                    "onActionPerformed": {
+                      "config": {
+                        "script": "\tindex \u003d 2\n\tdnpControl.pulse(system.dnp, index)"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
                 "meta": {
-                  "name": "SEL_Button"
+                  "name": "Reset_Button"
                 },
                 "position": {
-                  "height": 77,
-                  "width": 152,
-                  "x": 262.44,
-                  "y": 209.5
+                  "height": 21,
+                  "width": 21,
+                  "x": 133.56,
+                  "y": 256.5
+                },
+                "propConfig": {
+                  "meta.visible": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({[OPC-UA-to-MySQL]_SEL-751_/Points/FrontPanel_LED}, True, False)"
+                      },
+                      "type": "expr"
+                    }
+                  }
                 },
                 "props": {
                   "style": {
-                    "classes": "Page/Buttons/Button"
+                    "backgroundColor": "#D5D5D5",
+                    "borderStyle": "solid",
+                    "borderWidth": "1px"
                   },
                   "text": ""
                 },
@@ -689,21 +808,33 @@
               },
               {
                 "meta": {
-                  "name": "Load_Button"
+                  "name": "Target_Reset"
                 },
                 "position": {
-                  "height": 51,
-                  "width": 38,
-                  "x": 662.44,
-                  "y": 28
+                  "height": 32,
+                  "width": 98,
+                  "x": 163.919,
+                  "y": 251
+                },
+                "propConfig": {
+                  "meta.visible": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({[OPC-UA-to-MySQL]_SEL-751_/Points/FrontPanel_LED}, True, False)"
+                      },
+                      "type": "expr"
+                    }
+                  }
                 },
                 "props": {
-                  "style": {
-                    "classes": "Page/Buttons/Button"
-                  },
-                  "text": ""
+                  "text": "Targer Reset",
+                  "textStyle": {
+                    "fontFamily": "inherit",
+                    "fontSize": "14px",
+                    "fontWeight": "bold"
+                  }
                 },
-                "type": "ia.input.button"
+                "type": "ia.display.label"
               }
             ],
             "meta": {
@@ -771,7 +902,7 @@
               "config": {
                 "polling": {
                   "enabled": true,
-                  "rate": "1"
+                  "rate": "0.5"
                 },
                 "queryPath": "soe_event"
               },

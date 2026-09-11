@@ -27,6 +27,49 @@
           "grow": 1
         },
         "props": {
+          "columns": {
+            "active": {
+              "displayPath": {
+                "order": 2,
+                "width": 100
+              },
+              "label": {
+                "enabled": true,
+                "order": 3,
+                "width": 200
+              },
+              "name": {
+                "enabled": false
+              },
+              "priority": {
+                "order": 1,
+                "width": 100
+              },
+              "source": {
+                "enabled": false
+              },
+              "state": {
+                "order": 4,
+                "width": 200
+              }
+            }
+          },
+          "filters": {
+            "active": {
+              "conditions": {
+                "source": "prov:OPC-UA-to-MySQL:/tag:_SEL-751_/*"
+              },
+              "priorities": {
+                "critical": false,
+                "high": false,
+                "low": false,
+                "medium": false
+              }
+            }
+          },
+          "responsive": {
+            "enabled": true
+          },
           "style": {
             "classes": "Page/Alarm/Alarm"
           }

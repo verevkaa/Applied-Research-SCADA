@@ -56,8 +56,17 @@
           "x": 326.75,
           "y": 26.5
         },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "\"State: \" + if({[OPC-UA-to-MySQL]_SEL-751_/Points/CB_Status}, \"Closed\", \"Open\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
         "props": {
-          "text": "State: Closed",
           "textStyle": {
             "fontSize": 14,
             "fontWeight": "bold"
@@ -70,7 +79,7 @@
           "component": {
             "onActionPerformed": {
               "config": {
-                "script": "\t\n\tfrom time import sleep\n\t\n\tmyDescription \u003d \"LatchON Sent (ARM)\"\n\tname \u003d \"CB_ARM\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\tmyActor \u003d soe.getUser(self.session)\n\t\n\tsoe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")\n\t\n\tsleep(2)\n\t\n\tself.parent.custom.armed \u003d True\n\t\n\tmyDescription \u003d \"LatchON Received (ARM)\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\t\n\tsoe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")"
+                "script": "\t\n\tfrom time import sleep\n\t\n\tmyDescription \u003d \"LatchON Sent (ARM)\"\n\tname \u003d \"CB_ARM\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\tmyActor \u003d _soe.getUser(self.session)\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")\n\t\n\tsleep(2)\n\t\n\tself.parent.custom.armed \u003d True\n\t\n\tmyDescription \u003d \"LatchON Received (ARM)\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")"
               },
               "scope": "G",
               "type": "script"
@@ -105,7 +114,7 @@
           "component": {
             "onActionPerformed": {
               "config": {
-                "script": "\t\n\tfrom time import sleep\n\t\n\tmyDescription \u003d \"LatchOFF Sent (ARM)\"\n\tname \u003d \"CB_ARM\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\tmyActor \u003d soe.getUser(self.session)\n\t\n\tsoe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")\n\t\n\tsleep(2)\n\t\n\tself.parent.custom.armed \u003d False\n\t\n\tmyDescription \u003d \"LatchOFF Received (ARM)\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\t\n\tsoe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")"
+                "script": "\t\n\tfrom time import sleep\n\t\n\tmyDescription \u003d \"LatchOFF Sent (ARM)\"\n\tname \u003d \"CB_ARM\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\tmyActor \u003d _soe.getUser(self.session)\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")\n\t\n\tsleep(2)\n\t\n\tself.parent.custom.armed \u003d False\n\t\n\tmyDescription \u003d \"LatchOFF Received (ARM)\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")"
               },
               "scope": "G",
               "type": "script"
@@ -153,6 +162,17 @@
         "type": "ia.input.button"
       },
       {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t\t\n\tfrom time import sleep\n\t\n\ttagPath \u003d \"[OPC-UA-to-MySQL]_SEL-751_/Points/CB_Open\"\n\ttagName \u003d tagPath.rsplit(\"/\", 1)[-1].strip()\n\t\n\tindex \u003d 0\n\t\n\tmyDescription \u003d \"Pulse Sent (OPEN)\"\n\tmyActor \u003d _soe.getUser(self.session)\n\tvalue \u003d str(system.tag.readBlocking([tagPath])[0].value).title()\n\tevent \u003d \"control\"\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dtagName, pointValue\u003dvalue, actor\u003dmyActor, category\u003devent)\n\t\n\tsleep(0.4)\n\t\n\tdnpControl.pulse(system.dnp, index)\n\t\n\tself.parent.custom.armed \u003d False"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
         "meta": {
           "name": "Open_Button"
         },
@@ -194,6 +214,17 @@
         "type": "ia.input.button"
       },
       {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t\t\n\tfrom time import sleep\n\t\t\n\ttagPath \u003d \"[OPC-UA-to-MySQL]_SEL-751_/Points/CB_Close\"\n\ttagName \u003d tagPath.rsplit(\"/\", 1)[-1].strip()\n\t\n\tindex \u003d 1\n\t\n\tmyDescription \u003d \"Pulse Sent (CLOSE)\"\n\tmyActor \u003d _soe.getUser(self.session)\n\tvalue \u003d str(system.tag.readBlocking([tagPath])[0].value).title()\n\tevent \u003d \"control\"\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dtagName, pointValue\u003dvalue, actor\u003dmyActor, category\u003devent)\n\t\n\tsleep(0.4)\n\t\n\tdnpControl.pulse(system.dnp, index)\n\t\n\tself.parent.custom.armed \u003d False"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
         "meta": {
           "name": "Close_Button"
         },

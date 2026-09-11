@@ -1,0 +1,17 @@
+{
+  "scope": "A",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "code.py"
+  ],
+  "attributes": {
+    "hintScope": 2,
+    "lastModificationSignature": "25b4cc367a3772bd9c00571a1aee6f76ab4520fb4c04645bfeb289d93649a10f",
+    "lastModification": {
+      "actor": "ITOPSadmin",
+      "timestamp": "2026-09-11T16:45:58Z"
+    }
+  }
+}
