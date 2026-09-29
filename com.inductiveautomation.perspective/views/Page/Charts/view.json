@@ -26,7 +26,39 @@
           "basis": "600px",
           "grow": 1
         },
+        "propConfig": {
+          "props.axes": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "session.custom.trending.axes"
+              },
+              "type": "property"
+            }
+          },
+          "props.pens": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "session.custom.trending.pens"
+              },
+              "type": "property"
+            }
+          },
+          "props.plots": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "session.custom.trending.plots"
+              },
+              "type": "property"
+            }
+          }
+        },
         "props": {
+          "config": {
+            "unitOfTime": 1
+          },
           "interaction": {
             "chartZoomLevel": 1,
             "rangeZoomLevel": 1

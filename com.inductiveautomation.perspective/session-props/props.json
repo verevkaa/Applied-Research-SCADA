@@ -1,5 +1,133 @@
 {
-  "custom": {},
+  "custom": {
+    "trending": {
+      "axes": [
+        {
+          "color": "#757A7F",
+          "dataFormat": "0,0.##",
+          "grid": {
+            "color": "",
+            "dashArray": 0,
+            "opacity": 0.9,
+            "style": {
+              "classes": ""
+            },
+            "visible": false
+          },
+          "label": {
+            "font": {
+              "color": "#757A7F",
+              "size": 30
+            },
+            "offset": 0,
+            "style": {
+              "classes": ""
+            },
+            "text": "Voltage"
+          },
+          "name": "Voltage",
+          "position": "left",
+          "range": {
+            "auto": false,
+            "max": 130,
+            "min": 90
+          },
+          "style": {
+            "classes": ""
+          },
+          "tick": {
+            "color": "#757A7F",
+            "count": "Auto",
+            "label": {
+              "font": {
+                "color": "#757A7F",
+                "size": 10
+              },
+              "format": "Auto",
+              "style": {
+                "classes": ""
+              }
+            },
+            "style": {
+              "classes": ""
+            }
+          },
+          "width": 60
+        },
+        {
+          "color": "#757A7F",
+          "dataFormat": "0,0.##",
+          "grid": {
+            "color": "",
+            "dashArray": 0,
+            "opacity": 0.9,
+            "style": {
+              "classes": ""
+            },
+            "visible": false
+          },
+          "label": {
+            "font": {
+              "color": "#757A7F",
+              "size": 30
+            },
+            "offset": 0,
+            "style": {
+              "classes": ""
+            },
+            "text": "Current"
+          },
+          "name": "Current",
+          "position": "left",
+          "range": {
+            "auto": false,
+            "max": 3,
+            "min": 0
+          },
+          "style": {
+            "classes": ""
+          },
+          "tick": {
+            "color": "#757A7F",
+            "count": "Auto",
+            "label": {
+              "font": {
+                "color": "#757A7F",
+                "size": 10
+              },
+              "format": "Auto",
+              "style": {
+                "classes": ""
+              }
+            },
+            "style": {
+              "classes": ""
+            }
+          },
+          "width": 60
+        }
+      ],
+      "pens": [],
+      "plots": [
+        {
+          "color": "#FFFFFF",
+          "markers": [],
+          "relativeWeight": 1,
+          "style": {
+            "classes": ""
+          }
+        },
+        {
+          "color": "#FFFFFF",
+          "markers": [],
+          "relativeWeight": 1,
+          "style": {
+            "classes": ""
+          }
+        }
+      ]
+    }
+  },
   "propConfig": {
     "props.auth": {
       "access": "PRIVATE",
