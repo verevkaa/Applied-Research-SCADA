@@ -127,7 +127,7 @@
                   "props.elements[19].text": {
                     "binding": {
                       "config": {
-                        "expression": "\"Vca \u003d \" + {[OPC-UA-to-MySQL]_SEL-751_/Points/Vca_Mag} + \"V\""
+                        "expression": "\"Vca \u003d \" + numberFormat({[OPC-UA-to-MySQL]_SEL-751_/Points/Vca_Mag}, \"#0.00\") + \"V\""
                       },
                       "type": "expr"
                     }
@@ -135,7 +135,7 @@
                   "props.elements[20].text": {
                     "binding": {
                       "config": {
-                        "expression": "\"Vbc \u003d \" + {[OPC-UA-to-MySQL]_SEL-751_/Points/Vbc_Mag} + \"V\""
+                        "expression": "\"Vbc \u003d \" + numberFormat({[OPC-UA-to-MySQL]_SEL-751_/Points/Vbc_Mag}, \"#0.00\") + \"V\""
                       },
                       "type": "expr"
                     }
@@ -143,7 +143,7 @@
                   "props.elements[21].text": {
                     "binding": {
                       "config": {
-                        "expression": "\"Vab \u003d \" + {[OPC-UA-to-MySQL]_SEL-751_/Points/Vab_Mag} + \"V\""
+                        "expression": "\"Vab \u003d \" + numberFormat({[OPC-UA-to-MySQL]_SEL-751_/Points/Vab_Mag}, \"#0.00\") + \"V\""
                       },
                       "type": "expr"
                     }
@@ -151,7 +151,7 @@
                   "props.elements[22].text": {
                     "binding": {
                       "config": {
-                        "expression": "\"P \u003d \" + {[OPC-UA-to-MySQL]_SEL-751_/Points/RealPower_Mag} + \"W\""
+                        "expression": "\"P \u003d \" + numberFormat({[OPC-UA-to-MySQL]_SEL-751_/Points/RealPower_Mag}, \"#0.00\") + \"W\""
                       },
                       "type": "expr"
                     }
@@ -159,7 +159,7 @@
                   "props.elements[23].text": {
                     "binding": {
                       "config": {
-                        "expression": "\"Q \u003d \" + {[OPC-UA-to-MySQL]_SEL-751_/Points/ReactivePower_Mag} + \"VAR\""
+                        "expression": "\"Q \u003d \" + numberFormat({[OPC-UA-to-MySQL]_SEL-751_/Points/ReactivePower_Mag}, \"#0.00\") + \"VAR\""
                       },
                       "type": "expr"
                     }
@@ -167,7 +167,7 @@
                   "props.elements[24].text": {
                     "binding": {
                       "config": {
-                        "expression": "\"S \u003d \" + {[OPC-UA-to-MySQL]_SEL-751_/Points/ApparentPower_Mag} + \"VA\""
+                        "expression": "\"S \u003d \" + numberFormat({[OPC-UA-to-MySQL]_SEL-751_/Points/ApparentPower_Mag}, \"#0.00\") + \"VA\""
                       },
                       "type": "expr"
                     }
@@ -621,7 +621,7 @@
                       "fontWeight": "bold",
                       "name": "text_7",
                       "type": "text",
-                      "x": "453.20166015625",
+                      "x": "444.20166015625",
                       "y": "90.5"
                     },
                     {
@@ -632,7 +632,7 @@
                       "fontWeight": "bold",
                       "name": "text_8",
                       "type": "text",
-                      "x": "453",
+                      "x": "444",
                       "y": "110.5"
                     },
                     {
@@ -643,7 +643,7 @@
                       "fontWeight": "bold",
                       "name": "text_9",
                       "type": "text",
-                      "x": "453.83056640625",
+                      "x": "444.83056640625",
                       "y": "130.5"
                     },
                     {
@@ -698,8 +698,8 @@
                         "paint": "rgb(0, 0, 0)"
                       },
                       "type": "rect",
-                      "width": "88",
-                      "x": "449.5",
+                      "width": "96.5999984741211",
+                      "x": "440.5",
                       "y": "75.5"
                     },
                     {

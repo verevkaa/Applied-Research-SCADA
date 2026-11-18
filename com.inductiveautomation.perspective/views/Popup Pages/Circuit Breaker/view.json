@@ -79,7 +79,7 @@
           "component": {
             "onActionPerformed": {
               "config": {
-                "script": "\t\n\tfrom time import sleep\n\t\n\tmyDescription \u003d \"LatchON Sent (ARM)\"\n\tname \u003d \"CB_ARM\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\tmyActor \u003d _soe.getUser(self.session)\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")\n\t\n\tsleep(2)\n\t\n\tself.parent.custom.armed \u003d True\n\t\n\tmyDescription \u003d \"LatchON Received (ARM)\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")"
+                "script": "\t\n\tfrom time import sleep\n\t\n\tmyDescription \u003d \"LatchON Sent (ARM)\"\n\tname \u003d \"CB_ARM\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\tmyActor \u003d _soe.getUser(self.session)\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")\n\t\n\tsleep(2)\n\t\n\tself.parent.custom.armed \u003d True\n\t\n\tmyDescription \u003d \"LatchON Received (ARM)\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003d\"System\", category\u003d\"control\")"
               },
               "scope": "G",
               "type": "script"
@@ -114,7 +114,7 @@
           "component": {
             "onActionPerformed": {
               "config": {
-                "script": "\t\n\tfrom time import sleep\n\t\n\tmyDescription \u003d \"LatchOFF Sent (ARM)\"\n\tname \u003d \"CB_ARM\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\tmyActor \u003d _soe.getUser(self.session)\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")\n\t\n\tsleep(2)\n\t\n\tself.parent.custom.armed \u003d False\n\t\n\tmyDescription \u003d \"LatchOFF Received (ARM)\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")"
+                "script": "\t\n\tfrom time import sleep\n\t\n\tmyDescription \u003d \"LatchOFF Sent (ARM)\"\n\tname \u003d \"CB_ARM\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\tmyActor \u003d _soe.getUser(self.session)\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003dmyActor, category\u003d\"control\")\n\t\n\tsleep(2)\n\t\n\tself.parent.custom.armed \u003d False\n\t\n\tmyDescription \u003d \"LatchOFF Received (ARM)\"\n\tvalue \u003d str(self.parent.custom.armed).title()\n\t\n\t_soe.log(description\u003dmyDescription, pointName\u003dname, pointValue\u003dvalue, actor\u003d\u0027System\u0027, category\u003d\"control\")"
               },
               "scope": "G",
               "type": "script"
