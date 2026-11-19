@@ -71,17 +71,17 @@ All points live under `[OPC-UA-to-MySQL]_SEL-751_/Points`, with OPC item paths o
 
 | DNP3 point | Tag | Unit | Notes |
 |---|---|---|---|
-| AI 0 | `Ia_Mag` | A | Scaled ÷10, historized, alarmed |
-| AI 1 | `Ib_Mag` | A | Scaled ÷10, historized, alarmed |
-| AI 2 | `Ic_Mag` | A | Scaled ÷10, historized, alarmed |
-| AI 3 | `Vab_Mag` | V | Scaled ÷10, historized, alarmed |
-| AI 4 | `Vbc_Mag` | V | Scaled ÷10, historized, alarmed |
-| AI 5 | `Vca_Mag` | V | Scaled ÷10, historized, alarmed |
+| AI 0 | `Ia_Mag` | A | |
+| AI 1 | `Ib_Mag` | A | |
+| AI 2 | `Ic_Mag` | A | |
+| AI 3 | `Vab_Mag` | V | |
+| AI 4 | `Vbc_Mag` | V | |
+| AI 5 | `Vca_Mag` | V | |
 | AI 6 | `Frequency_Mag` | Hz | |
 | AI 7 | `RealPower_Mag` | W | |
 | AI 8 | `ReactivePower_Mag` | VAR | |
 | AI 9 | `ApparentPower_Mag` | VA | |
-| AI 10 | `PF_Mag` | % | Scaled ÷10 (raw 0–1000 → 0–100 %) |
+| AI 10 | `PF_Mag` | % | |
 | BI 0 | `Relay_Trip` | — | Overcurrent protection trip; alarmed |
 | BI 1 | `CB_Status` | — | `True` = breaker closed |
 | BI 2 | `CB_Open_Feedback` | — | Relay acknowledgement of the OPEN command |
